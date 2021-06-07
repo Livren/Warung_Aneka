@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">1811500097_1811500042_1811500017_TI6A_UTSML</string>
+    <string-array name="my_hotels">
+        <item>Podomoro</item>
+        <item>Bos Hotel</item>
+        <item>Novotel</item>
+        <item>Puncak</item>
+        <item>Green Land Hotel</item>
+    </string-array>
+</resources>

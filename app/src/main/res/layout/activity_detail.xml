@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <ImageView
+                android:id="@+id/imageViewFotoMakanan"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:srcCompat="@drawable/bakso" />
+
+            <TextView
+                android:id="@+id/textViewNamaMakanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="cursive"
+                android:text="Bakso"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/textViewInfoMakanan"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Alamat: JL.safri No.250 samping Toko Bangunan Abadi.     HALAL Dijamin Enak. Harga: RP. 20.000/bungkus" />
+
+           <RelativeLayout
+               android:layout_width="404dp"
+               android:layout_height="430dp">
+
+               <Button
+                   android:id="@+id/plus"
+                   android:layout_width="80dp"
+                   android:layout_height="wrap_content"
+
+                   android:layout_alignParentEnd="true"
+                   android:layout_alignParentBottom="true"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginEnd="36dp"
+                   android:layout_marginBottom="375dp"
+                   android:onClick="plus"
+                   android:text="+" />
+
+               <TextView
+                   android:id="@+id/jumlah"
+                   android:layout_width="120dp"
+                   android:layout_height="40dp"
+
+                   android:layout_alignParentTop="true"
+                   android:layout_marginTop="11dp"
+                   android:layout_marginEnd="20dp"
+                   android:layout_marginBottom="1dp"
+                   android:layout_toStartOf="@+id/plus"
+                   android:background="#979191"
+                   android:backgroundTintMode="add"
+                   android:padding="10dp"
+                   android:text="0"
+                   android:textColor="@color/white"
+                   android:textAlignment="center" />
+
+               <Button
+                   android:id="@+id/mines"
+                   android:layout_width="80dp"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentBottom="true"
+                   android:layout_marginEnd="21dp"
+                   android:layout_marginBottom="375dp"
+                   android:onClick="mines"
+                   android:layout_toStartOf="@+id/jumlah"
+
+                   android:text="-" />
+
+               <TextView
+                   android:id="@+id/txtNama"
+                   android:layout_width="wrap_content"
+                   android:layout_height="31dp"
+                   android:layout_above="@+id/namaPembeli"
+                   android:layout_alignParentStart="true"
+                   android:layout_alignParentEnd="true"
+                   android:layout_marginStart="13dp"
+                   android:layout_marginEnd="245dp"
+                   android:layout_marginBottom="0dp"
+                   android:text="Nama Pembeli" />
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/namaPembeli"
+                   android:layout_width="349dp"
+                   android:layout_height="50dp"
+                   android:layout_alignParentStart="true"
+                   android:layout_alignParentEnd="true"
+                   android:layout_alignParentBottom="true"
+                   android:layout_marginStart="14dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginEnd="4dp"
+                   android:layout_marginBottom="230dp"
+                   android:background="@drawable/backgroundbawah"
+                   android:fontFamily="sans-serif"
+                   android:padding="12dp"
+                   android:textColor="@color/black"
+                   android:textSize="12sp" />
+
+               <TextView
+                   android:id="@+id/alamat"
+                   android:layout_width="wrap_content"
+                   android:layout_height="31dp"
+                   android:layout_above="@+id/alamatPembeli"
+                   android:layout_alignParentStart="true"
+                   android:layout_alignParentEnd="true"
+                   android:layout_marginStart="13dp"
+                   android:layout_marginEnd="245dp"
+                   android:layout_marginBottom="0dp"
+                   android:text="Alamat Pembeli" />
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/alamatPembeli"
+                   android:layout_width="349dp"
+                   android:layout_height="50dp"
+                   android:layout_alignParentStart="true"
+                   android:layout_alignParentEnd="true"
+                   android:layout_alignParentBottom="true"
+                   android:layout_marginStart="14dp"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginEnd="4dp"
+                   android:layout_marginBottom="125dp"
+                   android:background="@drawable/backgroundbawah"
+                   android:fontFamily="sans-serif"
+                   android:padding="12dp"
+                   android:textColor="@color/black"
+                   android:textSize="12sp" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="31dp"
+                   android:layout_alignParentStart="true"
+                   android:layout_alignParentEnd="true"
+                   android:layout_alignParentBottom="true"
+                   android:layout_marginStart="15dp"
+                   android:layout_marginEnd="243dp"
+                   android:layout_marginBottom="70dp"
+                   android:text="Pembayaran" />
+
+               <RadioGroup
+                   android:id="@+id/bayar"
+                   android:layout_width="match_parent"
+                   android:layout_height="60dp"
+                   android:layout_alignParentBottom="true"
+                   android:layout_marginBottom="15dp"
+                   android:orientation="horizontal">
+
+                   <RadioButton
+                       android:id="@+id/ditempat"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                      android:layout_marginRight="20dp"
+                       android:text="Bayar di tempat" />
+
+                   <RadioButton
+                       android:id="@+id/transfer"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Transfer ATM/mBangking" />
+               </RadioGroup>
+
+
+           </RelativeLayout>
+
+            <Button
+                android:id="@+id/pesan"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="130dp"
+                android:layout_marginBottom="20dp"
+                android:text="Pesan"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

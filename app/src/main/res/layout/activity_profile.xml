@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_rectangle_1"
+        tools:ignore="MissingConstraints">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarAtas"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewFotoAdmin"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/profile1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="58dp"
+            android:layout_marginEnd="135dp"
+            android:text="Hai... Admin"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/imageViewFotoAdmin"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="85dp"
+            android:layout_marginEnd="67dp"
+            android:text="admin@gmail.com"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/imageViewFotoAdmin"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tulisanRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="290dp"
+            android:layout_marginEnd="2dp"
+            android:text="Silahkan berikan Rating dan komentar"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/imageViewFotoAdmin"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:onClick="logout"
+            android:background="@drawable/ic_logout__"
+            android:foreground="@drawable/ic_logout__" />
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/home"
+            android:foreground="@drawable/home"
+            android:onClick="home"
+            android:text="Home" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="61dp"
+            android:layout_height="53dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="110dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toEndOf="@+id/home"
+            android:background="@drawable/search3"
+            android:foreground="@drawable/search3"
+            android:onClick="search"
+            android:title="Search"
+            app:actionViewClass="androidx.appcompat.widget.SearchView"
+            app:showAsAction="always" />
+
+        <Button
+            android:id="@+id/profile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/profile1"
+            android:foreground="@drawable/profile1"
+            android:onClick="prof"
+            android:text="Button"
+            />
+
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="330dp"
+            android:layout_marginLeft="85dp"/>
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="400dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Tulis Komentar disini"
+            android:background="@color/white"
+            android:textAlignment="center"/>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="416dp"
+            android:layout_height="61dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-5dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="-2dp"
+            android:background="@drawable/ic_rectangle_12"
+            android:theme="?attr/actionBarTheme" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
